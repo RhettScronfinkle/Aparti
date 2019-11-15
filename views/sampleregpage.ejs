@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .navbar-expand-sm
+        {
+            width: 1310px;
+        }
+        #accordion
+        {
+            width: 1060px;
+        }
+        .secondrow
+        {
+            margin-left: 100px;
+        }
+
+        /* #map
+        {
+            height:500px;
+            width:100%;
+
+        } */
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/b5d10660ae.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();
+              $('[data-toggle="popover"]').popover();
+              $('a#desc').on('click', function(e) {e.preventDefault(); return true;});
+            });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-12">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="#">&nbsp &nbsp Aparti</a>
+                <ul class="navbar-nav">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Welcome
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/signup">SignUp</a>
+                            <a class="dropdown-item" href="/login">Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-10">        
+            <div class="row secondrow">
+
+                &nbsp &nbsp <img src="1.jpg" style="width:1050px; height:800px"> 
+
+            </div>
+            <div class="row">
+
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                About
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse hide" data-parent="#accordion">
+                            <div class="card-body">
+                                    It is a long established fact that a reader will be distracted by the
+                                    readable content of a page when looking at its layout. The point of using Lorem Ipsum
+                                    is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                                    content here', making it look like readable English. Many desktop publishing packages
+                                    and web page editors now use Lorem Ipsum as their default model text, and a search for 
+                                    'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+                                    over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                Contact Us
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse hide" data-parent="#accordion">
+                            <div class="card-body">
+                                <i class="fas fa-envelope"></i>&nbsp &nbsp goldenfibo1123@gmail.com<br>
+                                <i class="fas fa-mobile-alt"></i>&nbsp &nbsp +91 7749996142 (Apartment Office)<br>
+                                <i class="fas fa-mobile-alt"></i>&nbsp &nbsp +91 8851727453 (Security Desk)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                    Reach Us
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse hide" data-parent="#accordion">
+                                <div class="card-body">
+                                        <iframe style="width:1040px; height:300px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3873369151306!2d74.79212264982179!3d13.01098829078503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35211b768ac8f%3A0x6b1144ac2d5dadf3!2sNational%20Institute%20of%20Technology%20Karnataka!5e0!3m2!1sen!2sin!4v1571933759966!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+       
+
+
+
+
+        </div>
+        <div class="col-lg-2">        
+            <div class="row">
+                <div class="card" style="width:200px; height:30px">
+                    <img class="card-img-top" src="vasundhara.jpeg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <a href="#" data-toggle="popover" title="Vasundhara Singh" data-content="President" id="desc">Know Me</a>   
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="row">
+                <div class="card" style="width:200px; height:30px">
+                    <img class="card-img-top" src="Alan.png" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                         <a href="#" data-toggle="popover" title="Arvind Kumar" data-content="Treasurer" id="desc">Know Me</a>
+                                    
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="row">
+                <div class="card" style="width:200px; height:30px">
+                    <img class="card-img-top" src="patricia.jpeg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <a href="#" data-toggle="popover" title="Alisha Sabherwal" data-content="Secretary" id="desc">Know Me</a>
+                                        
+                    </div>
+                </div>
+    
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="row">
+                <div class="card" style="width:200px; height:30px">
+                    <img class="card-img-top" src="ryan.jpeg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <a href="#" data-toggle="popover" title="Rahul Dawedkar" data-content="Office Bearer" id="desc">Know Me</a>
+                                        
+                    </div>
+                </div>
+    
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+      
+</body>
+</html>

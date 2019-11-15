@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+        setInterval(() => {
+
+            cb = document.getElementById('checkb').checked
+            if(cb === true)
+            {
+                document.getElementById('permaddress').value = document.getElementById('resaddress').value
+            }
+            else
+            {
+                document.getElementById('permaddress').value=''
+            }
+
+
+        },500)    
+        
+    </script>
+    <style>
+        div{
+            border-top-width: 40px;
+        }
+
+        button{
+            width: 200px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+<% if (isAuthenticated) { %>
+    <div class="container-fluid">
+
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- <a class="navbar-brand" href="#"></a> -->
+                        <!-- <a class="navbar-brand" href="#">Update Profile</a> -->
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/flatownerslist"><span class="glyphicon glyphicon-file"></span> Flat Owners</a></li>
+                        <li><a href="/viewtenant"><span class="glyphicon glyphicon-file" style='color:white;'></span><span style='color:white;'> View Tenant Details</span> </a></li>
+                        <li><a href="/updatetenant"><span class="glyphicon glyphicon-file"></span> Update Tenant Details</a></li>
+                        <li><a href="/viewprofile"><span class="glyphicon glyphicon-file"></span> View Profile</a></li>
+                        <li><a href="/editdetails"><span class="glyphicon glyphicon-user"></span> Update Profile</a></li>
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                      </ul>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+                <form class="form-inline" action="/editdetails" method='POST' enctype="multipart/form-data">
+                <div class="col-sm-5">
+
+
+                        
+                            <label for="tenantname" class="mr-sm-2" id="tenantname">Tenant name</label><br>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="tenantname" name="tenantname" value='<%= tenantname %>' readonly><div id="tenantnameerror"></div><br><br><br>
+                            
+                            <label for="selfpic" class="mr-sm-2" id="selfpic">Photo</label><br> 
+                            <img src='<%= selfimage %>' width='120' height='120'><div id="selfpicerror"></div><br><br><br> 
+                            
+                            <label for="idproof" class="mr-sm-2" id="idproof">ID Proof</label><br>
+                            <a href='/tenantidproofdownload' target="_blank">Download IDProof</a><div id="idprooferror"></div><br><br><br>
+                            <label for="fathername" class="mr-sm-2" id="fathername">Father Name</label><br>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="fathername" name="fathername"  value='<%= fathername %>' readonly><div id="fathernameerror"></div><br><br><br>
+                            <!-- <button type="submit" class="btn btn-primary mb-2">Submit</button>  -->
+                        
+
+                </div>
+                <div class="col-sm-4">
+
+                        
+                            <label for="mothername" class="mr-sm-2" id="mothername">Mother Name</label><br>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="mothername" name="mothername" value='<%= mothername %>' readonly><div id="doornumbererror"></div><br><br><br>
+                            <label for="occupation" class="mr-sm-2" id="occupation">Occupation</label><br>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="occupation" value='<%= occupation %>' name="occupation" readonly><div id="occupationerror" value='<%= occupation%>' readonly></div><br><br><br>
+                            <label for="mobilenumber" class="mr-sm-2" id="mobilenumber">Mobile Number</label><br>
+                            <input type="tel" class="form-control mb-2 mr-sm-2" id="mobilenumber" name="mobilenumber" value='<%= mnumber %>' readonly><div id="mobilenumbererror"></div><br><br><br>
+                            
+                            <label for="emailid" class="mr-sm-2" id="emailid">Email</label><br>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="emailid" name="emailid"  value='<%= email %>' readonly><div id="emailiderror"></div><br><br><br>
+                            
+                            <!-- <input type="text" class="form-control mb-2 mr-sm-2" id="doornumber" name="doornumber" placeholder='9-A-8-8-845/8' value='9-A-8-8-845/8' required><div id="doornumbererror"></div><br><br><br> -->
+                            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                            <br><br>
+                         
+
+
+
+                </div>
+                <div class="col-sm-3">
+
+                        
+                            <label for="addressproof" class="mr-sm-2" id="selfpic">Address Proof</label><br> 
+                            <a href='/tenantaddressproofdownload' target="_blank">Download Address Proof</a><div id="tenantaddressprooferror"></div><br><br><br>
+                            
+                            <label for="permaddress" class="mr-sm-2" id="permanentaddress">Permanent Address</label><br>
+                            <%= permaddress %>
+                            <div id="permaddresserror"></div><br><br><br>
+                            
+
+
+
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+<% } %>
+<% if(!isAuthenticated) { %>
+<h1>Page Not Found</h1>
+<% } %>
+
+</body>
+
+</html>

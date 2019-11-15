@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      .two{
+        text-align: center;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+
+          
+         
+          // usernameerror = document.getElementById('usernameerror')
+          
+          setInterval(() => {
+            
+          
+            // MobileNUmber
+            mobnumberpat = new RegExp('[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
+            mobnumber = document.getElementById('mobnumber').value
+            if(mobnumber.length>0)
+            {
+                if(mobnumberpat.test(mobnumber))
+                {
+                    document.getElementById('mobnumbererror').innerText = ''
+                }
+                else
+                {
+                    document.getElementById('mobnumbererror').innerText = 'Invalid Mobile Number'
+                }
+            }
+            else
+            {
+                    document.getElementById('mobnumbererror').innerText = ''
+            
+            }
+          
+
+            //Door Number
+            doornumberpat = new RegExp('[1-9]-[A-Z]-[1-9]-[1-9]-[1-9][1-9][1-9]/[1-9]')
+            doornumber=document.getElementById('doornumber')
+            if(doornumber.value.length>0 & !doornumberpat.test(doornumber.value))
+            { 
+              document.getElementById('doornumbererror').innerText = 'Invalid '
+            }
+            else
+            {
+              document.getElementById('doornumbererror').innerText = ''
+            }
+
+
+            
+
+          //Email
+            emailpat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            emailid=document.getElementById('emailid')
+            if(emailid.value.length>0 & !emailpat.test(emailid.value.toLowerCase()))
+            { 
+              document.getElementById('emailerror').innerText = 'Invalid'
+            }
+            else
+            {
+              document.getElementById('emailerror').innerText = ''
+            }
+
+
+
+
+
+
+          }, 500);
+
+
+
+          //9-A-8-8-845/8
+         
+
+
+
+
+
+
+
+
+
+
+
+
+          
+     
+     
+     </script>
+
+</head>
+<body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-inverse">
+                        <div class="container">
+                          <div class="navbar-header">
+                            <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+                          </div>
+                          <!-- <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Page 1</a></li>
+                            <li><a href="#">Page 2</a></li>
+                          </ul> -->
+                          <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/signup"><span class="glyphicon glyphicon-user" style='color:white;'></span><span style='color:white;'>Sign Up</span></a></li>
+                            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+            </div>
+            
+            <div class="row two">
+            	<div class = "col-lg-8">
+                <div class="container">
+                  <h1>Sign Up</h1><br>
+                	<form class="form-inline" action="/signup" method='POST'>
+						          <label for="doornumber" class="mr-sm-2" id="doornumberfield">Door Number</label><br>
+				        		  <input type="text" class="form-control mb-2 mr-sm-2" id="doornumber" name="doornumber" placeholder='9-A-8-8-845/7' value='9-A-8-8-845/7' required><div id="doornumbererror"></div><br><br><br>
+				        		  <label for="emailid" class="mr-sm-2" id="emailfield">Email</label><br>
+                      <input type="text" class="form-control mb-2 mr-sm-2" id="emailid" name="emailid" placeholder='example@gmail.com' value='shouviksarkar95@gmail.com' required><div id="emailerror"></div><br><br><br>
+                      <label for="Number" class="mr-sm-2" id="mobnumberfield">Mobile Number</label><br>
+						          <input type="tel" class="form-control mb-2 mr-sm-2" id="mobnumber" name="mobnumber" placeholder='7475634567'  value='7749996142' required><div id="mobnumbererror"></div><br>
+                      <h5><%= userexistingstatus %></h5><br>
+						  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+					</form>
+
+
+
+                </div>
+               	</div>
+
+               
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+            </div>
+           
+        </div>
+       
+
+       
+    
+</body>
+</html>
