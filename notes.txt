@@ -1,11 +1,11 @@
 <att1>-<att2>-<att3>-..... and so on
 
 nexmo
-pwd - Alphadocx9230#
+pwd - A********0#
 
 sendgrid
 username - slartibertfast
-pwd - Alphadocx9230#
+pwd - A********0#
 
 Cookies are stored on the client side
 Sessions are stored on the server side
